@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="imagens-module">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width">
+                <title>Estudo Angular</title>
+                <link rel="stylesheet" href="css/bootstrap.min.css">
+                <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                <script src="js/lib/angular.min.js"></script>
+                <script src="js/main-module.js"></script>
+                <script src="js/controllers/imagens-controller.js"></script>
+                <script src="js/directives/minhas-diretivas.js"></script>
+        </head>
+        <body ng-controller="ImagensController">
+                <div class="container">
+                        <div class="jumbotron">
+                                <h1 class="text-center">Imagens</h1>
+                        </div>
+                                <meu-painel ng-repeat="img in imagens" titulo="{{img.titulo}}">
+                                        <img class="img-responsive center-block" src="{{img.url}}" alt="{{img.titulo}}">
+                                        </div>
+                                </meu-painel>
+                        </div>
+                </div>
+        </body>
+</html>
